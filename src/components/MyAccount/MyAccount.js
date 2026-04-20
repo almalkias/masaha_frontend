@@ -16,6 +16,10 @@ function MyAccount() {
     setIsMenuVisible(!isMenuVisible);
   }
 
+  const closeMenu = () => {
+    setIsMenuVisible(false);
+  }
+
   return (
     <div className='my-account'>
       <div className='wraper'>
@@ -27,16 +31,16 @@ function MyAccount() {
         {isMenuVisible && (
           <ul className="navigation-hover">
             <li>
-              <Link to="my-info">الحساب الشخصي</Link>
+              <Link to="account-settings" onClick={closeMenu}>الحساب الشخصي</Link>
             </li>
             <li>
-              <Link to="my-favourite">المفضلة</Link>
+              <Link to="my-favourite" onClick={closeMenu}>المفضلة</Link>
             </li>
             <li>
-              <Link to="my-orders">الطلبات</Link>
+              <Link to="my-orders" onClick={closeMenu}>الطلبات</Link>
             </li>
             <li>
-              <Link to="my-notifications">الإشعارات</Link>
+              <Link to="my-notifications" onClick={closeMenu}>الإشعارات</Link>
             </li>
           </ul>
         )}

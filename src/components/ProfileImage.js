@@ -8,8 +8,6 @@ function ProfileImage({ showText }) {
   const [userImage, setUserImage] = useState(null);
   const { setIsLoading } = useLoading();
 
-  console.log("ProfileImage component rendered, userImage:", userImage);
-
   useEffect(() => {
     const fetchProfile = async () => {
       try {

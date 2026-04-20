@@ -53,6 +53,7 @@
     .my-account .wraper {
         grid-template-columns: 1fr;
         padding-top: 0;
+        gap: 14px;
     }
 
     .my-account .wraper .navigation {
@@ -62,18 +63,56 @@
     .my-account .wraper .navigation-hover {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 45px;
-        padding: 20px 0;
-        background-color: #d6d4d4;
+        gap: 10px;
+        width: calc(100% - 24px);
+        margin: 0 auto;
+        padding: 14px;
+        background-color: #ffffff;
+        border: 1px solid #d8dfeb;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .my-account .wraper .navigation-hover li {
+        width: 100%;
+    }
+
+    .my-account .wraper .navigation-hover li a {
+        display: block;
+        width: 100%;
+        padding: 14px 16px;
+        text-align: right;
+        font-size: 17px;
+        font-weight: 600;
+        background-color: #f6f8fc;
+        border: 1px solid #e2e8f2;
+        border-radius: 12px;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .my-account .wraper .navigation-hover li a:hover,
+    .my-account .wraper .navigation-hover li a:active {
+        background-color: #e8eef8;
+        transform: translateY(-1px);
     }
 
     .my-account .wraper .toggle-menu {
         display: flex;
-        justify-content: center;
-        background-color: #d6d4d4;
-        gap: 20px;
-        padding: 20px 0;
+        align-items: center;
+        justify-content: space-between;
+        width: calc(100% - 24px);
+        margin: 0 auto;
+        padding: 16px 18px;
+        background-color: #7895CB;
+        color: #fff;
+        border-radius: 18px;
+        box-shadow: 0 10px 24px rgba(120, 149, 203, 0.28);
+        cursor: pointer;
+    }
+
+    .my-account .wraper .toggle-menu p {
+        font-size: 18px;
+        font-weight: 700;
     }
 }
 

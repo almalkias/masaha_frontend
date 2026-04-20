@@ -8,7 +8,7 @@ export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
-  const [coupon, setCoupon] = useState(null); // { code, discountAmount }
+  const [coupon, setCoupon] = useState(null);
   const { isLoggedIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const { setIsLoading } = useLoading();
@@ -107,12 +107,38 @@ export const CartProvider = ({ children }) => {
 
   // Apply coupon — calls backend to validate and get discount amount
   const applyCoupon = async (code) => {
+    const cleanedCode = code.trim();
+
+    if (!cleanedCode) {
+      return { status: 'error', message: 'ادخل الكوبون' };
+    }
+
+    setIsLoading(true);
+
     try {
-      const res = await apiClient.get('/coupons/validate/', { params: { code } });
-      setCoupon({ code, discountAmount: res.data.discount_amount });
-      return { status: 'success', discountAmount: res.data.discount_amount };
+      const res = await apiClient.post('/coupons/validate/', {
+        code: cleanedCode
+      });
+
+      const discount = Number(res.data.discount_amount) || 0;
+
+      setCoupon({
+        code: res.data.code,
+        discountAmount: discount
+      });
+
+      return {
+        status: 'success',
+        discountAmount: discount
+      };
+
     } catch (error) {
-      return { status: 'error', message: error.response?.data?.detail || 'كوبون غير صالح' };
+      return {
+        status: 'error',
+        message: error.response?.data?.error || 'كوبون غير صالح'
+      };
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -122,7 +148,13 @@ export const CartProvider = ({ children }) => {
 
   const getDiscount = () => coupon?.discountAmount || 0;
 
-  const getFinalTotal = () => getCartTotal() + getTax() - getDiscount();
+  const getFinalTotal = () => {
+    const total = getCartTotal();
+    const tax = getTax();
+    const discount = getDiscount();
+
+    return Math.max(total + tax - discount, 0); // 🔥 منع القيم السالبة
+  };
 
   // Total count
   const totalQuantity = () => {
@@ -141,6 +173,26 @@ export const CartProvider = ({ children }) => {
       setCartItems([]);
     }
   }, [isLoggedIn]);
+
+  const revalidateCoupon = async (code) => {
+    try {
+      const res = await apiClient.post('/coupons/validate/', { code });
+
+      setCoupon(prev => ({
+        ...prev,
+        discountAmount: Number(res.data.discount_amount) || 0
+      }));
+
+    } catch {
+      setCoupon(null);
+    }
+  };
+
+  useEffect(() => {
+    if (coupon) {
+      revalidateCoupon(coupon.code); // يعيد التحقق
+    }
+  }, [cartItems]);
 
   return (
     <CartContext.Provider
