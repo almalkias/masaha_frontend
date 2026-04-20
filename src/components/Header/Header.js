@@ -33,6 +33,7 @@ function Header() {
   ];
 
   const handleLogout = async () => {
+    if (!window.confirm("هل أنت متأكد أنك تريد تسجيل الخروج؟")) return;
     await logout();
     navigate(location.state?.from || "/");
   };
