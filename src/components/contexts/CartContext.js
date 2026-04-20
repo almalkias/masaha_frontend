@@ -144,16 +144,15 @@ export const CartProvider = ({ children }) => {
 
   const removeCoupon = () => setCoupon(null);
 
-  const getTax = () => getCartTotal() * 0.15;
+  const getTax = () => getCartTotal() * 15 / 115;
 
   const getDiscount = () => coupon?.discountAmount || 0;
 
   const getFinalTotal = () => {
     const total = getCartTotal();
-    const tax = getTax();
     const discount = getDiscount();
 
-    return Math.max(total + tax - discount, 0); // 🔥 منع القيم السالبة
+    return Math.max(total - discount, 0);
   };
 
   // Total count
