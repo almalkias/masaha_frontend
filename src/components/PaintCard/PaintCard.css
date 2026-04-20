@@ -84,18 +84,8 @@
     letter-spacing: -0.28px;
 }
 
-.paint-card-container .paint-description .toggle-content {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-top: 24px;
-    color: var(--Color, #4A55A2);
-    font-size: 15px;
-    cursor: pointer;
-}
-
 .paint-card-container .paint-description p {
-    font-size: 11px;
+    font-size: 14px;
     line-height: 169.1%;
     letter-spacing: 1.6px;
 }
@@ -105,10 +95,9 @@
 }
 
 .paint-card-container .paint-description .size,
-.paint-card-container .paint-description .date,
 .paint-card-container .paint-description .description {
     font-size: 13px;
-    margin-bottom: 12px;
+    margin-top: 30px;
 }
 
 .paint-card-container .btns {

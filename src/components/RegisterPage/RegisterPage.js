@@ -142,7 +142,7 @@ function RegisterPage() {
                   <div className='terms'>
                     <div className='content'>
                       <label>أوافق على <span onClick={openModal}> الشروط والأحكام</span></label>
-                      <Terms show={showModal} onClose={closeModal} />
+                      {/* <Terms show={showModal} onClose={closeModal} /> */}
                       <Field type="checkbox" id="terms" name="terms" />
                     </div>
                     <ErrorMessage name="terms">

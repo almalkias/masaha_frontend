@@ -1,7 +1,5 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import shield_tick_left from '../../assets/images/chevron-left-2.svg';
-import shield_tick_down from '../../assets/images/chevron-down-2.svg';
 import { CartContext } from '../contexts/CartContext';
 import { AuthContext } from "../contexts/AuthContext";
 import { FavouritePaintContext } from "../contexts/FavouritePaintContext";
@@ -13,8 +11,6 @@ import "react-toastify/dist/ReactToastify.css";
 import "./PaintCard.css";
 
 function PaintCard({ paint }) {
-  const [showDescription, setShowDescription] = useState(false);
-
   const { favouritePaints, addFavouritePaint, removeFavouritePaint } = useContext(FavouritePaintContext);
   const { addToCart } = useContext(CartContext);
   const { isLoggedIn } = useContext(AuthContext);
@@ -26,14 +22,9 @@ function PaintCard({ paint }) {
     paint.width && paint.height
       ? `${paint.width}*${paint.height} انش`
       : "غير محدد";
-  const paintDate = paint.date || "غير متوفر";
 
   // Compute this directly
   const isFavourite = favouritePaints.some(p => p.id === paint.id);
-
-  const toggleDescription = () => {
-    setShowDescription(!showDescription);
-  };
 
   const handleAddToCartClick = async (item, buyNow) => {
     if (!isLoggedIn) {
@@ -97,34 +88,15 @@ function PaintCard({ paint }) {
         <div className="price">{paint.price} ريال</div>
       </div>
 
-      <div className="paint-description" onClick={toggleDescription}>
-        {showDescription ? (
-          <>
-            <div className="toggle-content">
-              أقرا الوصف
-              <img src={shield_tick_down} alt="" />
-            </div>
+      <div className="paint-description">
+        <div className="description">
+          <p>{paintDescription}</p>
+        </div>
 
-            <div className="description">
-              <p>{paintDescription}</p>
-            </div>
-
-            <div className="size">
-              <p>حجم اللوحة</p>
-              {paintSize}
-            </div>
-
-            <div className="date">
-              <p>نشرت منذ</p>
-              {paintDate}
-            </div>
-          </>
-        ) : (
-          <div className="toggle-content">
-            أقرا الوصف
-            <img src={shield_tick_left} alt="" />
-          </div>
-        )}
+        <div className="size">
+          <p>حجم اللوحة</p>
+          {paintSize}
+        </div>
       </div>
 
       <div className="btns">

@@ -68,9 +68,7 @@ function Cart() {
 
                 {/* INFO */}
                 <div className="cart-item-info">
-                  <Link to={`/paint-details/${item.product.id}`}>
-                    <img src={item.product.image} alt="" />
-                  </Link>
+                  <img src={item.product.image} alt="" />
 
                   <div>
                     <h3>{item.product.name}</h3>
