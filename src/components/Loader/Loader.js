@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoading } from "../contexts/LoadingContext";
+import logo from "../../assets/images/logo-new.png";
 import './Loader.css';
 
 const Loader = () => {
@@ -10,7 +11,8 @@ const Loader = () => {
             {isLoading && (
                 <div className="loader-container">
                     <div className="logo-icon">
-                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1816.000000 789.000000"
+                        <img src={logo} alt="مسحة" />
+                        {false && <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1816.000000 789.000000"
                             preserveAspectRatio="xMidYMid meet">
 
                             <g transform="translate(0.000000,789.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
@@ -126,7 +128,7 @@ m252 -111 c56 -17 134 -73 176 -127 152 -191 69 -508 -157 -597 -80 -32 -204
 c-109 0 -199 2 -199 4 0 5 180 428 192 450 10 19 11 19 21 0 6 -10 50 -116 98
 -236z" />
                             </g>
-                        </svg>
+                        </svg>}
                     </div>
                 </div>
             )}
