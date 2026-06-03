@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import PaintCard from "../PaintCard/PaintCard";
-import chevron from '../../assets/images/chevron-down.svg';
-import filter from '../../assets/images/filter.svg';
 import arrow_left from '../../assets/images/arrow-square-left.svg';
 import arrow_right from '../../assets/images/arrow-square-right.svg';
 import { ToastContainer } from "react-toastify";

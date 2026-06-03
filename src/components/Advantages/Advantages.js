@@ -1,6 +1,5 @@
-import star from '../../assets/images/Star.png';
-import diamond from '../../assets/images/Diamond.png';
-import badge from '../../assets/images/Verified Badge.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFeather, faGem, faShield } from '@fortawesome/free-solid-svg-icons';
 import './Advantages.css';
 
 function Advantages() {
@@ -9,11 +8,11 @@ function Advantages() {
             <div className='container'>
                 <hr />
                 <div className='question'>
-                    <h1>لماذا اقتناء ؟</h1>
+                    <h1>لماذا مسحه ؟</h1>
                 </div>
                 <div className='cards'>
                     <div className='card'>
-                        <img src={diamond} alt="" />
+                        <FontAwesomeIcon icon={faFeather} className="advantage-icon" />
                         <div className="info">
                             <h2>فريدة</h2>
                             <p>
@@ -22,7 +21,7 @@ function Advantages() {
                         </div>
                     </div>
                     <div className='card'>
-                        <img src={star} alt="" />
+                        <FontAwesomeIcon icon={faGem} className="advantage-icon" />
                         <div className="info">
                             <h2>مميزة</h2>
                             <p>
@@ -31,7 +30,7 @@ function Advantages() {
                         </div>
                     </div>
                     <div className='card'>
-                        <img src={badge} alt="" />
+                        <FontAwesomeIcon icon={faShield} className="advantage-icon" />
                         <div className="info">
                             <h2>أصلية</h2>
                             <p>

@@ -1,7 +1,6 @@
 import { useState, useContext, useEffect, useRef } from "react";
 import {
   Elements,
-  PaymentElement,
   useStripe,
   useElements,
   CardElement
@@ -13,8 +12,7 @@ import { useLoading } from "../contexts/LoadingContext";
 import { Link, useNavigate } from "react-router-dom";
 import "./Payment.css";
 
-import logo from "../../assets/images/logo-2.png";
-import title from "../../assets/images/title-2.png";
+import logo from "../../assets/images/logo-new.png";
 
 // Stripe public key
 const stripePromise = loadStripe("pk_test_51TDoAPAbWn7WhVRQpxmIh8idOanR9hCI78qiUfODQqQaKMJEQwbknHVduLAGT9KXiFtlE4tswJiUEcVdRRuJEdGy00GArG8emF");
@@ -169,8 +167,7 @@ function PaymentPage() {
       {/* Logo */}
       <div className="logo">
         <Link to="/">
-          <img src={logo} alt="" />
-          <img src={title} alt="" />
+          <img src={logo} alt="مسحة" className="site-logo" />
         </Link>
       </div>
 

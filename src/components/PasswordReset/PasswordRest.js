@@ -2,8 +2,7 @@ import { useState } from "react";
 import { useSearchParams, Link, useNavigate } from "react-router-dom";
 import apiClient from "../../api/client";
 import "./PasswordReset.css";
-import logo from "../../assets/images/logo.png";
-import title from "../../assets/images/title.png";
+import logo from "../../assets/images/logo-new.png";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { ToastContainer, toast } from "react-toastify";
@@ -95,14 +94,13 @@ function PasswordReset() {
       <div className="container">
         <div className="logo">
           <Link to="/">
-            <img src={logo} alt="" />
-            <img src={title} alt="" />
+            <img src={logo} alt="مسحة" className="site-logo" />
           </Link>
         </div>
 
         <div className="main-content">
           <div className="form-container">
-            <h3>إعادة تعيين كلمة المرور</h3>
+            <h1>إعادة تعيين كلمة المرور</h1>
 
             <Formik
               initialValues={initialValues}

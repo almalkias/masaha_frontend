@@ -1,5 +1,4 @@
-import logo from "../../assets/images/logo.png";
-import title from "../../assets/images/title.png";
+import logo from "../../assets/images/logo-new.png";
 import trash from "../../assets/images/trash.svg";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
@@ -49,14 +48,13 @@ function Cart() {
     <div className="cart">
       <div className="logo">
         <Link to="/">
-          <img src={logo} alt="" />
-          <img src={title} alt="" />
+          <img src={logo} alt="مسحة" className="site-logo" />
         </Link>
       </div>
 
       <hr />
 
-      <h3>السلة</h3>
+      <h1>السلة</h1>
 
       {cartItems.length > 0 ? (
         <div className="cart-container">

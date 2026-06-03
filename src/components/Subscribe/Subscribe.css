@@ -7,7 +7,6 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-family: Poppins;
     padding: 0 10px;
 }
 
@@ -17,13 +16,10 @@
 }
 
 .subscribe .container h1 {
-    font-size: 40px;
     margin-bottom: 16px;
 }
 
 .subscribe .container h2 {
-    font-size: 25px;
-    font-weight: 400;
 }
 
 .subscribe form {
@@ -50,7 +46,7 @@
 }
 
 .subscribe form input[type="submit"] {
-    background-color: #5b85c1;
+    background-color: #486BAC;
     font-size: 25px;
     color: white;
     border: none;
@@ -62,7 +58,6 @@
 
 .subscribe form input[type="text"]::placeholder {
     color: #ccc;
-    font-family: Poppins;
     font-size: 20px;
     font-weight: 511;
     padding-left: 3px;

@@ -16,7 +16,6 @@
 }
 
 .advantages h1 {
-    font-size: 40px;
 }
 
 .advantages .cards {
@@ -42,8 +41,12 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.advantages .card .advantage-icon {
+    font-size: 52px;
+    color: #486BAC;
+}
+
 .advantages .card .info {
-    font-family: "Alumni Sans";
     text-align: center;
     letter-spacing: 0.6px;
     font-size: 24px;
@@ -51,7 +54,6 @@
 }
 
 .advantages .card .info h2 {
-    font-weight: 700;
     padding-bottom: 30px;
 }
 

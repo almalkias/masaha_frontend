@@ -1,7 +1,12 @@
 .cart {
     text-align: right;
     padding: 66px;
-    font-family: Cairo;
+}
+
+.cart .logo {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 24px;
 }
 
 .cart .cart-container {
@@ -44,7 +49,6 @@
     border-radius: 4px;
     background: #A0BFE0;
     color: var(--Color, #4A55A2);
-    font-family: Cairo;
     font-size: 12px;
     font-weight: 400;
     letter-spacing: -0.28px;
@@ -117,13 +121,11 @@
 .cart .cart-container .cart-price-details .summary-header h3 {
     margin: 0 0 6px;
     color: #1f2937;
-    font-size: 26px;
-    font-weight: 700;
 }
 
 .cart .cart-container .cart-price-details .summary-header p {
     margin: 0;
-    color: #7a7a7a;
+    color: #707070;
     font-size: 14px;
     font-weight: 500;
 }
@@ -154,8 +156,6 @@
 .cart .cart-container .cart-price-details .summary-item>h4 {
     margin: 0;
     color: #1f2937;
-    font-size: 16px;
-    font-weight: 700;
 }
 
 .cart .cart-container .cart-price-details .summary-item-info {
@@ -165,7 +165,7 @@
 }
 
 .cart .cart-container .cart-price-details .summary-item-info span {
-    color: #7a7a7a;
+    color: #707070;
     font-size: 13px;
     font-weight: 600;
 }
@@ -212,8 +212,7 @@
 }
 
 .cart .cart-container .cart-price-details .coupon-form input[type="text"]::placeholder {
-    color: #B8B8B8;
-    font-family: Cairo;
+    color: #707070;
     font-size: 16px;
     font-weight: 600;
 }
@@ -221,7 +220,6 @@
 .cart .cart-container .cart-price-details .coupon-form input[type="submit"] {
     flex-grow: 1;
     color: #3e4a90;
-    font-family: Cairo;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: -0.28px;
@@ -244,8 +242,6 @@
 .cart .cart-container .cart-price-details .total-row h3 {
     margin: 0;
     color: #111827;
-    font-size: 24px;
-    font-weight: 800;
 }
 
 .cart .cart-container .cart-price-details .total-row p {
@@ -263,7 +259,6 @@
     margin: 28px auto 0;
     color: white;
     text-align: center;
-    font-family: Cairo;
     font-size: 22px;
     font-weight: 700;
     border: none;
@@ -346,7 +341,6 @@
     background: none;
     border: none;
     color: #c0392b;
-    font-family: Cairo;
     font-size: 13px;
     font-weight: 700;
     cursor: pointer;

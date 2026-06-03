@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from '../../assets/images/logo.png';
-import title from '../../assets/images/title.png';
+import logo from '../../assets/images/logo-new.png';
 import instagram from '../../assets/images/instagram.svg';
 import twitter from '../../assets/images/twitter.svg';
 import tiktok from '../../assets/images/tiktok.svg';
@@ -29,7 +28,7 @@ function Footer() {
                     </div>
                     <div className='contact-info'>
                         <img src={mail} alt='' />
-                        <p>iqtinaa@iqtinaa.com</p>
+                        <p>support@masaha.com</p>
                     </div>
                     <div className='contact-info'>
                         <img src={location} alt='' />
@@ -46,8 +45,7 @@ function Footer() {
                 <div className="box social-box">
                     <div className='logo'>
                         <Link to="/">
-                            <img src={title} alt="" />
-                            <img src={logo} alt="" />
+                            <img src={logo} alt="مسحة" className="site-logo" />
                         </Link>
                     </div>
                     <p>حيث يلتقي الفن والجمال</p>

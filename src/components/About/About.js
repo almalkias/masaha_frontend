@@ -1,7 +1,5 @@
-import vision from "../../assets/images/vision.png";
-import blue_logo from "../../assets/images/logo_blue.png";
-import yellow_logo from "../../assets/images/logo_yellow.png";
-import red_logo from "../../assets/images/logo_red.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUsers, faBullseye } from '@fortawesome/free-solid-svg-icons';
 import "./About.css";
 
 
@@ -10,8 +8,8 @@ function About() {
         <div className="about">
             <div className="box">
                 <div className="question">
-                    <img src={red_logo} alt="" />
-                    <h3>من نحن ؟</h3>
+                    <FontAwesomeIcon icon={faUsers} className="about-icon" />
+                    <h2>من نحن ؟</h2>
                 </div>
                 <ul>
                     <li>منصة تفاعلية لجميع الفنانين ومحبي اقتناء الفن.</li>
@@ -22,12 +20,12 @@ function About() {
 
             <div className="box">
                 <div className="question">
-                    <img src={blue_logo} alt="" />
-                    <h3> أهدافنا </h3>
+                    <FontAwesomeIcon icon={faBullseye} className="about-icon" />
+                    <h2> أهدافنا </h2>
                 </div>
                 <ul>
                     <li>
-                        توفير بيئة رقمية متكاملة لعرض الأعمال الفنية وتوثيقها.
+                        توفير بيئة رقمية متكاملة لعرض الأعمال الفنية .
                     </li>
                     <li>تسويق وبيع الأعمال الفنية لجمهور واسع.</li>
                     <li>
@@ -38,7 +36,7 @@ function About() {
                 </ul>
             </div>
 
-            <div className="box">
+            {/* <div className="box">
                 <div className="question">
                     <img src={yellow_logo} alt="" />
                     <h3>ما الذي نقدمه ؟</h3>
@@ -49,11 +47,11 @@ function About() {
                     <li>ميزات تفاعلية للتواصل مع الفنانين.</li>
                     <li>دورات تدريبية وموارد تعليمية للفنانين و محبي الفن.</li>
                 </ul>
-            </div>
+            </div> */}
 
             <div className='vision'>
-                <h3>“نحن نؤمن بأهمية الفن في تعزيز التواصل والتفاعل الثقافي وتعميق فهمنا للعالم من حولنا”</h3>
-                <div className="vision-container">
+                <blockquote>”نحن نؤمن بأهمية الفن في تعزيز التواصل والتفاعل الثقافي وتعميق فهمنا للعالم من حولنا”</blockquote>
+                {/* <div className="vision-container">
                     <div className="vision-square">
                         <img src={vision} alt="" />
                         <div className="overlay">
@@ -72,7 +70,7 @@ function About() {
                             <p>نسعى ان نكون منصة رائدة لإستقطاب الفنون التشكيلية وخلق فرص مميزة لتنمية القدرات الإنتاجية و الإبداعية للمجتمع الفني والمحلي وتعزيز الإستثمار بالفنون.</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
         </div>

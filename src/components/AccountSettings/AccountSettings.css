@@ -47,7 +47,6 @@
 }
 
 .account-settings .inp-container label {
-    font-family: "Tajawal", sans-serif;
     font-size: 20px;
     font-weight: 500;
 }
@@ -91,9 +90,8 @@ select {
     border-radius: 8px;
     width: 130px;
     height: 30px;
-    background-color: #7895CB;
+    background-color: #486BAC;
     color: white;
-    font-family: Almarai;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: -0.28px;
@@ -128,7 +126,6 @@ select {
     background-color: brown;
     color: #ffffff;
     font-size: 30px;
-    font-family: Manrope;
     border-radius: 50%;
     font-weight: 800;
     margin-bottom: 10px;
@@ -141,4 +138,13 @@ select {
     border: 3px solid #fff;
     object-fit: cover;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.account-settings .avatar-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e7f3;
+    color: #486BAC;
+    font-size: 44px;
 }

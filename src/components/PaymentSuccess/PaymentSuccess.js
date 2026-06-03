@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo-2.png";
-import title from "../../assets/images/title-2.png";
+import logo from "../../assets/images/logo-new.png";
 import "./PaymentSuccess.css";
 
 import { useEffect, useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 import { useLoading } from "../contexts/LoadingContext";
-import apiClient from "../../api/client";
 
 
 function PaymentSuccess() {
@@ -36,8 +34,7 @@ function PaymentSuccess() {
     <div className="payment-success">
       <div className="logo">
         <Link to="/">
-          <img src={logo} alt="" />
-          <img src={title} alt="" />
+          <img src={logo} alt="مسحة" className="site-logo" />
         </Link>
       </div>
 

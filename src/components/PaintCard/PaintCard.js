@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { CartContext } from '../contexts/CartContext';
 import { AuthContext } from "../contexts/AuthContext";
 import { FavouritePaintContext } from "../contexts/FavouritePaintContext";

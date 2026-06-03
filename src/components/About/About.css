@@ -1,18 +1,15 @@
 .about {
     direction: rtl;
     padding: 60px 80px;
-    font-family: Cairo;
 }
 
 .about h1 {
-    font-size: 40px;
     letter-spacing: -0.28px;
 }
 
 .about .box {
     display: flex;
     flex-direction: column;
-    font-size: 20px;
     letter-spacing: -0.28px;
     margin-bottom: 48px;
 }
@@ -24,9 +21,9 @@
     margin-bottom: 12px;
 }
 
-.about .box .question h3 {
-    font-weight: 700;
+.about .about-icon {
     font-size: 26px;
+    color: #486BAC;
 }
 
 .about ul {
@@ -47,12 +44,15 @@
     gap: 40px;
 }
 
-.about .vision h3 {
-    font-size: 26px;
-    font-weight: 700;
+.about .vision blockquote {
     letter-spacing: -0.28px;
     text-align: center;
     max-width: 900px;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.8;
+    color: #1f2937;
 }
 
 .about .vision-container {
@@ -94,7 +94,6 @@
 
 .about .vision-square .overlay p {
     color: white;
-    font-family: Cairo;
     font-size: 52px;
     font-weight: 700;
     letter-spacing: -0.28px;
@@ -111,7 +110,6 @@
 
 .hover-content p {
     color: white;
-    font-family: Cairo;
     font-size: 20px;
     font-weight: 700;
     letter-spacing: -0.28px;
@@ -136,7 +134,7 @@
         font-size: 17px;
     }
 
-    .about .box .question h3 {
+    .about .box .question h2 {
         font-size: 22px;
     }
 
@@ -144,7 +142,7 @@
         font-size: 16px;
     }
 
-    .about .vision h3 {
+    .about .vision blockquote {
         font-size: 20px;
         text-align: center;
     }
@@ -181,7 +179,7 @@
         margin-bottom: 36px;
     }
 
-    .about .box .question h3 {
+    .about .box .question h2 {
         font-size: 19px;
     }
 
@@ -189,7 +187,7 @@
         font-size: 14px;
     }
 
-    .about .vision h3 {
+    .about .vision blockquote {
         font-size: 16px;
     }
 

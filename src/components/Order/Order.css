@@ -22,7 +22,6 @@
     padding-bottom: 14px;
     border-bottom: 1px solid rgba(39, 39, 39, 0.08);
     color: #3c4267;
-    font-family: Cairo, sans-serif;
     font-size: 15px;
     font-weight: 700;
 }
@@ -35,7 +34,6 @@
 
 .order .order-container .section-title {
     color: #3c4267;
-    font-family: Cairo, sans-serif;
     font-size: 15px;
     font-weight: 700;
 }
@@ -56,7 +54,6 @@
     border-radius: 12px;
     background-color: #f8faff;
     color: #272727;
-    font-family: Cairo, sans-serif;
     font-size: 14px;
     font-weight: 600;
 }
@@ -83,7 +80,6 @@
     align-items: center;
     gap: 10px;
     color: #4a4a4a;
-    font-family: Cairo, sans-serif;
     font-size: 15px;
     font-weight: 700;
     padding-top: 14px;
@@ -92,7 +88,6 @@
 
 .order .order-container .order-total {
     color: #2f355c;
-    font-family: Cairo, sans-serif;
     font-size: 16px;
     font-weight: 700;
 }

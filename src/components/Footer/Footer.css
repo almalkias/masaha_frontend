@@ -9,7 +9,6 @@
     /* display: grid; */
     /* grid-template-columns: repeat(auto-fill, minmax(217px, 1fr)); */
     color: var(--Black, var(--Color-2, #000));
-    font-family: Almarai;
     line-height: 101%;
     letter-spacing: -0.28px;
     text-align: right;

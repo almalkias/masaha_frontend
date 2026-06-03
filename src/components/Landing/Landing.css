@@ -28,8 +28,6 @@
 }
 
 .landing .content h1 {
-    font-family: "SF Arabic";
-    font-size: 54.93px;
     padding-bottom: 24px;
 }
 
@@ -53,21 +51,21 @@
     width: 175px;
     height: 46px;
     border-radius: 5px;
-    border: 1px #6184ab;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .landing .btns a:first-child {
     background-color: white;
-    color: #3572B7;
-    border: 1px solid #3572B7;
+    color: #486BAC;
+    border: 1px solid #486BAC;
 }
 
 .landing .btns a:last-child {
-    background-color: #3572B7;
+    background-color: #486BAC;
     color: white;
 }
 

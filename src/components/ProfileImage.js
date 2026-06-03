@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import apiClient from "../api/client";
 import { useLoading } from "./contexts/LoadingContext";
-import logo from "../assets/images/logo-2.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 
 function ProfileImage({ showText }) {
@@ -63,11 +64,17 @@ function ProfileImage({ showText }) {
             style={{ display: "none" }}
           />
 
-          <img
-            src={userImage || logo}
-            alt="Profile"
-            className="avatar"
-          />
+          {userImage ? (
+            <img
+              src={userImage}
+              alt="Profile"
+              className="avatar"
+            />
+          ) : (
+            <div className="avatar avatar-placeholder">
+              <FontAwesomeIcon icon={faUser} />
+            </div>
+          )}
 
           {showText && <p>تعديل</p>}
         </label>

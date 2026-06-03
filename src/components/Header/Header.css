@@ -1,5 +1,4 @@
 .header {
-    font-family: Almarai;
     box-shadow: 0px 10px 30px -18px rgba(0, 0, 0, 0.35);
     position: relative;
     background-color: #FFF;
@@ -34,6 +33,10 @@
 
 .header .bottom-section .center {
     grid-area: center;
+}
+
+.header .site-logo {
+    height: 64px;
 }
 
 .header .bottom-section .nav {
@@ -103,15 +106,15 @@
 }
 
 .header .auth-btn-primary {
-    border: 1px solid #5b85c1;
-    background-color: #5b85c1;
+    border: 1px solid #486BAC;
+    background-color: #486BAC;
     color: white;
 }
 
 .header .auth-btn-secondary {
     background-color: #fff;
-    color: #5b85c1;
-    border: 1px solid #5b85c1;
+    color: #486BAC;
+    border: 1px solid #486BAC;
 }
 
 @media (min-width: 800px) {

@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
-import Terms from "../Terms/Terms";
-import logo from '../../assets/images/logo-2.png';
-import title from '../../assets/images/title-2.png';
+import logo from '../../assets/images/logo-new.png';
 import circle_1 from '../../assets/images/1.svg';
 import circle_2 from '../../assets/images/2.svg';
 import circle_3 from '../../assets/images/3.svg';
@@ -95,13 +93,12 @@ function RegisterPage() {
       <div className='container'>
         <div className='logo'>
           <Link to="/">
-            <img src={logo} alt="" />
-            <img src={title} alt="" />
+            <img src={logo} alt="مسحة" className="site-logo" />
           </Link>
         </div>
         <div className='main-content'>
           <div className='form-container'>
-            <h3>إنشاء حساب</h3>
+            <h1>إنشاء حساب</h1>
             <Formik
               initialValues={initialValues}
               onSubmit={onSubmit}

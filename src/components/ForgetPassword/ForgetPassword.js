@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
-import title from "../../assets/images/title.png";
+import logo from "../../assets/images/logo-new.png";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from 'yup';
-import axios from "axios";
 import apiClient from "../../api/client";
 import './ForgetPassword.css';
 import { useLoading } from '../contexts/LoadingContext';
@@ -53,10 +51,11 @@ function ForgetPassword() {
 
   return (
     <div className="forget-password">
-      <Link to="/">
-        <img src={logo} alt="" />
-        <img src={title} alt="" />
-      </Link>
+      <div className="logo">
+        <Link to="/">
+          <img src={logo} alt="مسحة" className="site-logo" />
+        </Link>
+      </div>
       <Formik initialValues={initialValues}
         onSubmit={onSubmit}
         validationSchema={validationSchema}
