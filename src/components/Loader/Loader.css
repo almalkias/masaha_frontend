@@ -15,13 +15,29 @@
     width: 260px;
 }
 
-.loader-container .logo-icon img {
+.loader-container .logo-icon svg {
     width: 100%;
-    animation: pulse-logo 1.2s ease-in-out infinite;
+    height: auto;
 }
 
-@keyframes pulse-logo {
-    0%   { opacity: 1; }
-    50%  { opacity: 0.3; }
-    100% { opacity: 1; }
+.loader-container .logo-icon path {
+    fill: transparent;
+    stroke-width: 30px;
+    stroke: #00000052;
+    stroke-dasharray: 43192;
+    stroke-dashoffset: 43192;
+    animation: animate-logo 1s linear infinite;
+}
+
+@keyframes animate-logo {
+    0% {
+        stroke-dashoffset: 43192;
+    }
+    50% {
+        stroke-dashoffset: 86384;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 86384;
+    }
 }
