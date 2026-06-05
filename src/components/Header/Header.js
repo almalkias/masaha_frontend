@@ -15,6 +15,13 @@ import "./Header.css";
 
 function Header() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const [language, setLanguage] = useState(localStorage.getItem("language") || "ar");
+
+  const toggleLanguage = () => {
+    const newLang = language === "ar" ? "en" : "ar";
+    localStorage.setItem("language", newLang);
+    setLanguage(newLang);
+  };
   const { cartItems, totalQuantity } = useContext(CartContext);
   const { logout, authToken } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -143,9 +150,9 @@ function Header() {
 
 
           <div className="left">
-            <a href="!#" className="circle-bg global-one">
-              <img src={global} alt="" />
-            </a>
+            <button className="circle-bg global-one lang-toggle" onClick={toggleLanguage}>
+              {language === "ar" ? "English" : "تصفح بالعربية"}
+            </button>
             <Search />
           </div>
           <ul className="nav">

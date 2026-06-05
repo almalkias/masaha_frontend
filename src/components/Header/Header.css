@@ -67,6 +67,18 @@
     width: 26px;
 }
 
+.header .lang-toggle {
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    width: auto;
+    height: 38px;
+    padding: 0 12px;
+    color: #333;
+    border-radius: 20px;
+}
+
 .header .dropdown.circle-bg img {
     cursor: pointer;
 }
@@ -229,11 +241,11 @@
     }
 
     .header .bottom-section .global-one {
-        display: none;
+        display: inline-flex;
     }
 
-    .header .bottom-section .global-two {
-        display: block;
+    .header .Search {
+        display: none;
     }
 
     .header .bottom-section input[type="text"] {

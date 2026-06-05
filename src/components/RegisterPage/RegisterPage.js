@@ -9,7 +9,7 @@ import * as Yup from 'yup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons';
 import "./RegisterPage.css";
-import axios from 'axios';
+import apiClient from '../../api/client';
 import { useLoading } from '../contexts/LoadingContext';
 
 
@@ -72,7 +72,7 @@ function RegisterPage() {
   const onSubmit = async (values, { setErrors }) => {
     setIsLoading(true);
     try {
-      const response = await axios.post('accounts/register/', values);
+      const response = await apiClient.post('accounts/register/', values);
       console.log('Registration successful', response);
       navigate('/login', { state: { registrationSuccess: true } });
     } catch (error) {

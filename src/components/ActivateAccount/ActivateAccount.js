@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams, Link } from 'react-router-dom';
-import axios from 'axios';
+import apiClient from '../../api/client';
 import './ActivateAccount.css';
 
 
@@ -10,7 +10,7 @@ function ActivateAccount() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.post('auth/users/activation/', { uid, token });
+                const response = await apiClient.post('auth/users/activation/', { uid, token });
                 console.log(response, 'Account activated successfully');
             } catch (error) {
                 console.error('Error activating account', error);

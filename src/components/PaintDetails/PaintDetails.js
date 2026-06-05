@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
-import axios from 'axios';
+import apiClient from '../../api/client';
 import shipment from '../../assets/images/Group.svg';
 import map from '../../assets/images/black.svg';
 import "./PaintDetails.css";
@@ -32,7 +32,7 @@ function PaintDetails() {
         const fetchPaintingDetails = async () => {
             setIsLoading(true);
             try {
-                const response = await axios.get(`api/paints/${id}`);
+                const response = await apiClient.get(`api/paints/${id}`);
                 const data = response.data;
 
                 // Map the images to an array

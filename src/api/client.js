@@ -7,10 +7,13 @@ const apiClient = axios.create({
 // Request interceptor
 apiClient.interceptors.request.use((config) => {
   const token = localStorage.getItem("authToken");
+  const language = localStorage.getItem("language") || "ar";
 
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
+
+  config.headers["X-Language"] = language;
 
   return config;
 });
