@@ -29,7 +29,6 @@ export const CartProvider = ({ children }) => {
     try {
       await apiClient.post('/cart/add/', {
         product: productId,
-        quantity: 1
       });
       await fetchCart();
       if (buyNow) navigate('/cart');
@@ -71,22 +70,6 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  // Update quantity
-  const updateCartItem = async (itemId, quantity) => {
-    setIsLoading(true);
-
-    try {
-      await apiClient.patch(`/cart/${itemId}/update/`, {
-        quantity
-      });
-      await fetchCart();
-    } catch (error) {
-      console.error("Error updating item:", error.response?.data || error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
   // Fetch the cart in a separate function
   const fetchCart = async () => {
     try {
@@ -100,7 +83,7 @@ export const CartProvider = ({ children }) => {
   // Subtotal (before tax/discount)
   const getCartTotal = () => {
     return cartItems.reduce(
-      (total, item) => total + Number(item.product.price) * item.quantity,
+      (total, item) => total + Number(item.product.price),
       0
     );
   };
@@ -157,10 +140,7 @@ export const CartProvider = ({ children }) => {
 
   // Total count
   const totalQuantity = () => {
-    return cartItems.reduce(
-      (total, item) => total + item.quantity,
-      0
-    );
+    return cartItems.length;
   };
 
   // Initialize cart state
@@ -201,7 +181,6 @@ export const CartProvider = ({ children }) => {
         addToCart,
         removeFromCart,
         clearCart,
-        updateCartItem,
         getCartTotal,
         applyCoupon,
         removeCoupon,

@@ -12,7 +12,6 @@ function Cart() {
     cartItems,
     coupon,
     removeFromCart,
-    updateCartItem,
     getCartTotal,
     applyCoupon,
     removeCoupon,
@@ -128,10 +127,9 @@ function Cart() {
                 <div className="row summary-item" key={item.id}>
                   <div className="summary-item-info">
                     <h4>{item.product.name}</h4>
-                    <span>الكمية: {item.quantity}</span>
                   </div>
 
-                  <h4>{Number(item.product.price) * item.quantity} ر.س</h4>
+                  <h4>{Number(item.product.price).toFixed(2)} ر.س</h4>
                 </div>
               ))}
             </div>
