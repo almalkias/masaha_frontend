@@ -127,15 +127,15 @@ export const CartProvider = ({ children }) => {
 
   const removeCoupon = () => setCoupon(null);
 
-  const getTax = () => getCartTotal() * 15 / 115;
+  const getTax = () => {
+    const total = Math.max(getCartTotal() - getDiscount(), 0);
+    return total * 15 / 115;
+  };
 
   const getDiscount = () => coupon?.discountAmount || 0;
 
   const getFinalTotal = () => {
-    const total = getCartTotal();
-    const discount = getDiscount();
-
-    return Math.max(total - discount, 0);
+    return Math.max(getCartTotal() - getDiscount(), 0);
   };
 
   // Total count

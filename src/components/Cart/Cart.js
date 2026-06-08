@@ -141,7 +141,7 @@ function Cart() {
 
             <div className="row summary-row">
               <h4>المجموع الجزئي</h4>
-              <span>{getCartTotal().toFixed(2)} ر.س</span>
+              <span>{(getFinalTotal() - getTax()).toFixed(2)} ر.س</span>
             </div>
 
             <div className="row summary-row">
