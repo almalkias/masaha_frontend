@@ -58,6 +58,10 @@ const CheckoutForm = ({ clientSecret }) => {
 
       if (result.paymentIntent.status === "succeeded") {
         navigate("/payment-success");
+      } else if (result.paymentIntent.status === "requires_action") {
+        setError("التحقق الإضافي مطلوب. يرجى إكمال التحقق والمحاولة مرة أخرى.");
+      } else {
+        setError("لم يتمكن من إتمام الدفع. يرجى المحاولة مرة أخرى.");
       }
 
     } catch (err) {
