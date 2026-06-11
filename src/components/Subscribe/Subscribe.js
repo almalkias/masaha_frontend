@@ -12,7 +12,7 @@ function Subscribe() {
                     </h2>
                 </div>
                 <form action="">
-                    <input type="text" placeholder="user@Iqtinaa.com" />
+                    <input type="text" placeholder="user@masaha.com" />
                     <input type="submit" value="إشتراك" />
                 </form>
             </div>

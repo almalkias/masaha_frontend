@@ -1,0 +1,20 @@
+{
+  "register": {
+    "title": "إنشاء حساب",
+    "emailLabel": "الايميل",
+    "passwordLabel": "كلمة المرور",
+    "confirmPasswordLabel": "تأكيد كلمة المرور",
+    "agreeText": "أوافق على",
+    "termsLink": "الشروط والأحكام",
+    "submitButton": "التسجيل",
+    "alreadyHaveAccount": "هل لديك حساب بالفعل؟",
+    "loginLink": "سجل الدخول"
+  },
+  "validation": {
+    "required": "هذا الحقل مطلوب",
+    "invalidEmail": "صيغة الايميل غير صحيحه",
+    "passwordTooShort": "كلمة المرور قصيرة",
+    "passwordsMismatch": "كلمة المرور غير متطابقة",
+    "mustAcceptTerms": "يجب قراءة الشروط و الأحكام و الموافقة"
+  }
+}

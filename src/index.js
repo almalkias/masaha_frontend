@@ -9,6 +9,7 @@ import { CartProvider } from "./components/contexts/CartContext";
 import { AuthProvider } from "./components/contexts/AuthContext";
 import { FavouritePaintProvider } from "./components/contexts/FavouritePaintContext";
 import { LoadingProvider } from "./components/contexts/LoadingContext";
+import "./i18n";
 
 
 axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;

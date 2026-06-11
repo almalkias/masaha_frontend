@@ -244,10 +244,6 @@
         display: inline-flex;
     }
 
-    .header .Search {
-        display: none;
-    }
-
     .header .bottom-section input[type="text"] {
         width: 140px;
     }

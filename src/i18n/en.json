@@ -1,0 +1,20 @@
+{
+  "register": {
+    "title": "Create Account",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "confirmPasswordLabel": "Confirm Password",
+    "agreeText": "I agree to the",
+    "termsLink": "Terms and Conditions",
+    "submitButton": "Register",
+    "alreadyHaveAccount": "Already have an account?",
+    "loginLink": "Log in"
+  },
+  "validation": {
+    "required": "This field is required",
+    "invalidEmail": "Invalid email format",
+    "passwordTooShort": "Password is too short",
+    "passwordsMismatch": "Passwords do not match",
+    "mustAcceptTerms": "You must read and accept the terms and conditions"
+  }
+}

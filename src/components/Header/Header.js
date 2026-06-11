@@ -12,6 +12,7 @@ import heart from "../../assets/images/heart.svg";
 import Hamburger from "../../assets/images/Hamburger_icon.svg";
 import settings from "../../assets/images/account-settings.svg";
 import "./Header.css";
+import i18n from "../../i18n";
 
 function Header() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -21,6 +22,7 @@ function Header() {
     const newLang = language === "ar" ? "en" : "ar";
     localStorage.setItem("language", newLang);
     setLanguage(newLang);
+    i18n.changeLanguage(newLang);
   };
   const { cartItems, totalQuantity } = useContext(CartContext);
   const { logout, authToken } = useContext(AuthContext);
@@ -150,9 +152,9 @@ function Header() {
 
 
           <div className="left">
-            <button className="circle-bg global-one lang-toggle" onClick={toggleLanguage}>
+            {/* <button className="circle-bg global-one lang-toggle" onClick={toggleLanguage}>
               {language === "ar" ? "English" : "تصفح بالعربية"}
-            </button>
+            </button> */}
             <Search />
           </div>
           <ul className="nav">
